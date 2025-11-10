@@ -13,7 +13,9 @@ let timeLimit = 60000;
 let hueOffset = 0;
 
 function setup() {
-  let canvas = createCanvas(windowWidth * (windowWidth > 768 ? 0.66 : 1), windowHeight, WEBGL);
+  let canvasWidth = windowWidth > 768 ? windowWidth * 0.66 : windowWidth;
+  let canvasHeight = windowWidth > 768 ? windowHeight : windowHeight * 0.5;
+  let canvas = createCanvas(canvasWidth, canvasHeight, WEBGL);
   canvas.parent("canvas-container");
   colorMode(HSB, 360, 255, 255);
   frameRate(60);
