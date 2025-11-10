@@ -1,6 +1,6 @@
 # 🦋 Chaos Controller – Lorenz Attractor
 
-**Live Demo**: [https://snowbellsan.github.io/chaos-controller](https://snowbellsan.github.io/chaos-controller) *(update after deploy)*
+**Live Demo**: [https://snowbellsan.github.io/Chaos-Controller](https://snowbellsan.github.io/Chaos-Controller) *(update after deploy)*
 
 ---
 
