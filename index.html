@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Chaos Controller 🦋 Lorenz Attractor</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+  <script src="sketch.js" defer></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body { 
+      margin: 0; 
+      background-color: #000; 
+      color: #fff; 
+      font-family: 'Noto Sans JP', sans-serif; 
+      overflow: hidden;
+    }
+    canvas { display: block; touch-action: none; }
+    #controls input[type=range]::-webkit-slider-thumb { background-color: #f472b6; }
+    #controls input[type=range]::-moz-range-thumb { background-color: #f472b6; }
+    .action-button { padding: 8px 15px; border-radius: 5px; cursor: pointer; font-weight: bold; }
+    .reset-button { background-color: #dc2626; color: white; border: none; }
+    .timer-select { padding: 7px; border-radius: 5px; background-color: #1f2937; color: white; border: 1px solid #4b5563; }
+    #timer-display { margin-top: 10px; font-size: 1.1rem; color: #f472b6; font-weight: bold; }
+  </style>
+</head>
+<body class="flex flex-col md:flex-row h-screen">
+  <div id="canvas-container" class="w-full md:w-2/3 h-full md:h-full bg-black"></div>
+
+  <div class="w-full md:w-1/3 h-auto md:h-full overflow-y-auto bg-gray-900 p-6 flex flex-col">
+    <h1 class="text-2xl font-bold mb-3 text-pink-400">🦋 Chaos Controller</h1>
+    <p class="text-gray-300 mb-4 text-sm">
+      Explore the <strong>Lorenz Attractor</strong> — a visual poem of chaos. 
+      A tiny change in initial conditions can lead to vastly different futures: <em>the Butterfly Effect</em>.
+    </p>
+
+    <h2 class="text-lg font-semibold text-pink-300 mt-4 mb-2">Parameter Controls</h2>
+    <div id="controls" class="space-y-3 mb-4"></div>
+    
+    <div id="timer-display">Drawing in progress...</div>
+
+    <h2 class="text-lg font-semibold text-pink-300 mt-6 mb-2">Parameter Guide</h2>
+    <ul class="list-disc list-inside text-gray-300 text-sm space-y-1">
+      <li><strong>ρ (Rho)</strong>: Thermal energy. Chaos emerges near <strong>28</strong>.</li>
+      <li><strong>σ (Sigma)</strong>: Diffusion rate. Standard: <strong>10</strong>.</li>
+      <li><strong>β (Beta)</strong>: Geometric factor. Standard: <strong>8/3 ≈ 2.67</strong>.</li>
+    </ul>
+
+    <h2 class="text-lg font-semibold text-pink-300 mt-6 mb-2">How to Interact</h2>
+    <ul class="list-disc list-inside text-gray-300 text-sm space-y-1">
+      <li>Drag to rotate (1 finger on mobile)</li>
+      <li>Pinch or mouse wheel to zoom</li>
+      <li>Use sliders to tune physics</li>
+      <li><strong>Speed</strong>: simulation steps per frame</li>
+      <li><strong>Reset</strong>: restart trajectory</li>
+      <li><strong>Timer</strong>: auto-stop after set duration</li>
+    </ul>
+
+    <h2 class="text-lg font-semibold text-pink-300 mt-6 mb-2">Philosophy of Chaos</h2>
+    <p class="text-gray-300 text-sm italic">
+      "The future is determined, yet unpredictable." 
+      — Even a butterfly's wingbeat can reshape the world.
+    </p>
+
+    <footer class="text-xs text-gray-500 mt-6">
+      © Chaos Controller by Master
+    </footer>
+  </div>
+</body>
+</html>
