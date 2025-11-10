@@ -49,4 +49,3 @@ This app lets you **touch, control, and feel** the **Butterfly Effect** in real 
 
 ---
 
-## 📂 Project Structure
