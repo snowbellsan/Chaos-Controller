@@ -1,8 +1,5 @@
 # 🦋 Chaos Controller – Lorenz Attractor
 
-![Chaos Controller Preview](https://via.placeholder.com/800x400.png?text=Chaos+Controller+Preview)  
-*(Replace with actual screenshot)*
-
 **Live Demo**: [https://snowbellsan.github.io/chaos-controller](https://snowbellsan.github.io/chaos-controller) *(update after deploy)*
 
 ---
