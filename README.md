@@ -36,6 +36,13 @@ This app lets you **touch, control, and feel** the **Butterfly Effect** in real 
 
 ---
 
+## Author
+
+**Jack**    ( https://x.com/Jackpot_jack )  
+*Simulator Archaeologist | AI Conductor | One-sentence Philosopher*
+
+---
+
 ## 🎮 How to Use
 
 1. **Drag** to rotate the 3D space
